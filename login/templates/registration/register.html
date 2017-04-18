@@ -1,0 +1,28 @@
+{##########################################}
+{## login/templates/registration/register.html#}
+{##########################################}
+
+{% extends "base.html" %}
+
+{% block heading %}
+  <h1>Register</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post" action=".">{% csrf_token %}
+    <table border="0">
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Register" class="btn btn-default"/>
+  </form>
+  <p>
+    <br>
+    <a href="{% url 'account:login' %}">Login</a>
+  </p>
+{% endblock %}
+
+
+
+
+
+

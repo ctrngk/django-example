@@ -1,0 +1,11 @@
+{##########################################}
+{## login/templates/registration/success.html#}
+{##########################################}
+
+
+{% extends "base.html" %}
+
+{% block content %}
+  Thank you for registering.
+  <a href="{% url 'account:login' %}">Login</a>
+{% endblock %}

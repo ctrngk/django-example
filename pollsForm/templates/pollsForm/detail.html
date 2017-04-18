@@ -1,0 +1,10 @@
+{##########################################}
+{## pollsForm/templates/pollsForm/detail.html#}
+{##########################################}
+
+<h1> {{ question.question_text }}</h1>
+
+<form action="{% url 'pollsForm:vote' question.id %}" method="post"> {% csrf_token %}
+    {{ choice_forms }}
+    <input type="submit" value="Vote" />
+</form>
